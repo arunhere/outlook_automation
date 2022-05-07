@@ -1,10 +1,6 @@
 Feature: Test Login functionality
 
-  Scenario: Login with valid credentials
-    # Given user enters username "gokulnathm+dev1@pando.ai" and password "Gopal@123" with URL "https://outlook.live.com/owa"
-    Given user navigates to outlook "https://outlook.live.com/owa"
-    When user enter the user name
-    Then click on sign in button
-    And user enter password on the password page
-    Then click again on sign in button
-    And user lands on the home page 
+  Scenario: Login outlook with valid credentials and send a test mail
+    Given user navigates to outlook "https://outlook.live.com/owa" and enteres the username "arun27.here@outlook.com" and password "Welcomepassword@1"
+    When user clicks the new message button and enters the To email "arun27.here@outlook.com" and send the email
+    Then open the inbox and check for the received email and open the email
